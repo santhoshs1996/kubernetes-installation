@@ -19,8 +19,8 @@ echo "            -> Done"
 
 echo "     STEP 2: Installing apt-transport-https"
         apt-get install -y apt-transport-https 1>/dev/null
-        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-        echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.23/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+        echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.23/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 echo "            -> Done"
 
 echo "     STEP 3: Updating apt"
